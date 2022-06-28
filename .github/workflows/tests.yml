@@ -6,6 +6,7 @@ jobs:
     runs-on: windows-2022
     steps:
       - name: Execute tests
+        shell: pwsh
         run: |
           Get-ChildItem -Path .
-        shell: pwsh
+          whoami
