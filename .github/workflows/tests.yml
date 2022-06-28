@@ -10,3 +10,4 @@ jobs:
           .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
           ls .\tests\dst
           cat .\tests\log.csv
+        shell: pwsh
