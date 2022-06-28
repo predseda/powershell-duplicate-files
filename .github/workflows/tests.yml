@@ -8,5 +8,4 @@ jobs:
       - name: Execute tests
         run: |
           ls
-          .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
         shell: powershell
