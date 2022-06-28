@@ -2,11 +2,12 @@ name: tests
 on:
   push:
     branches:
-      - duplicate-files
+      - 'duplicate-files'
 jobs:
   tests:
     runs-on: windows-2022
     steps:
+      - run: ls
       - run: .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
       - run: ls .\tests\dst
       - run: cat .\tests\log.csv
