@@ -5,8 +5,8 @@ jobs:
     runs-on: windows-2022
     shell: pwsh
     steps:
-    run: |
-      ls
-      .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
-      ls .\tests\dst
-      cat .\tests\log.csv
+      - run: |
+          ls
+          .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
+          ls .\tests\dst
+          cat .\tests\log.csv
