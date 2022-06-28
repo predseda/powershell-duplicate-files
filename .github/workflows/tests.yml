@@ -8,4 +8,4 @@ jobs:
       - name: Execute tests
         run: |
           Get-ChildItem -Path .
-        shell: powershell
+        shell: pwrsh
