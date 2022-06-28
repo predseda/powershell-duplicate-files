@@ -4,6 +4,8 @@ jobs:
   tests:
     runs-on: windows-2022
     steps:
+      - run: pwd
+      - run: ls
       - run: Get-ChildItem -Path .\
       - run: .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
       - run: ls .\tests\dst
