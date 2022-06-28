@@ -8,4 +8,4 @@ jobs:
       - name: Execute tests
         shell: pwsh
         run: |
-          ${{ github.action_path }}\duplicate_files.ps1 -SrcDir ${{ github.action_path }}\tests\src -DstDir ${{ github.action_path }}\tests\dst -LogFile ${{ github.action_path }}\tests\log.csv
+          .\${{ github.action_path }}\duplicate_files.ps1 -SrcDir ${{ github.action_path }}\tests\src -DstDir ${{ github.action_path }}\tests\dst -LogFile ${{ github.action_path }}\tests\log.csv
