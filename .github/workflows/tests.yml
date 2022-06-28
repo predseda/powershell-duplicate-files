@@ -1,9 +1,12 @@
-tests:
-  name: Tests
-  runs-on: windows-2022
-  steps:
-    - name: Execute tests
-      run: |
-        ls
-        .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
-      shell: powershell
+name: Tests
+on: [push]
+jobs:
+  tests:
+    name: Tests
+    runs-on: windows-2022
+    steps:
+      - name: Execute tests
+        run: |
+          ls
+          .\duplicate_files.ps1 -SrcDir .\tests\src\ -DstDir .\tests\dst\ -LogFile .\tests/log.csv
+        shell: powershell
