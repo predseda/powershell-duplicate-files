@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: .\duplicate_files.ps1 -SrcDir .\tests\src -DstDir .\tests\dst -LogFile .\tests\log.csv
-      - run: ls
+      - run: Get-Content .\tests\dst
       - run: Get-Content .\tests\log.csv
