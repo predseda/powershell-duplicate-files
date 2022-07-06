@@ -14,8 +14,8 @@ $hashes = @{}
 # Log file is in CSV format
 Out-File -FilePath $LogFile -InputObject "Puvodni umisteni,Nove umisteni" -Encoding utf8
 
-Write-Host "Duplicate files" -ForegroundColor red
-Write-Host "---------------" -ForegroundColor green
+Write-Host "Duplicate files" -ForegroundColor Green -BackgroundColor Black
+Write-Host "---------------" -ForegroundColor Green -BackgroundColor Black
 
 $files = @(Get-ChildItem -Path $SrcDir -Recurse)
 foreach($file in $files) {
