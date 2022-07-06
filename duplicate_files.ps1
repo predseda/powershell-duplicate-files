@@ -27,7 +27,7 @@ foreach($file in $files) {
         }
         else {
             Write-Output "Duplicite file: $file_full_name"
-            Move-Item -Path $file_full_name -Destination $DstDir -Force
+            Move-Item -Path $file_full_name -Destination $DstDir\ -Force
             $new_dst = $DstDir + '\' + $file_short_name
             Out-File -FilePath $LogFile -InputObject "$file_full_name,$new_dst" -Encoding utf8 -Append
         }
