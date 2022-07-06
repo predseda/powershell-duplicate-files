@@ -14,6 +14,9 @@ $hashes = @{}
 # Log file is in CSV format
 Out-File -FilePath $LogFile -InputObject "Puvodni umisteni,Nove umisteni" -Encoding utf8
 
+Write-Output "Duplicate files"
+Write-Output "---------------"
+
 $files = @(Get-ChildItem -Path $SrcDir -Recurse)
 foreach($file in $files) {
     $file_full_name = $file.FullName
@@ -26,7 +29,7 @@ foreach($file in $files) {
             $hashes[$hash.Hash] = $file_full_name
         }
         else {
-            Write-Output "Duplicite file: $file_full_name"
+            Write-Output $file_full_name
             Move-Item -Path $file_full_name -Destination $DstDir -Force
             $new_dst = $DstDir + '\' + $file_short_name
             Out-File -FilePath $LogFile -InputObject "$file_full_name,$new_dst" -Encoding utf8 -Append
