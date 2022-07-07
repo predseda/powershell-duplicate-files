@@ -19,4 +19,4 @@ Where:
   this file will be created automatically; **file extension should be** `.csv`
 
 # License
-This project is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+This project is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
