@@ -1,8 +1,7 @@
 $ok = $True
 
 $expected_files = @(".gitkeep", "ghjk.txt", "main.py", "log.csv")
-#$files = (Get-ChildItem -Path ".\tests\dst\")
-$files = (Get-ChildItem -Path "C:\Users\predseda\Desktop\dst\")
+$files = (Get-ChildItem -Path ".\tests\dst\")
 foreach($file in $files) {
     $file_name = $file.Name
     if(-not ($file_name -in $expected_files)) {
