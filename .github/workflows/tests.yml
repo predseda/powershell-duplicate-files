@@ -1,5 +1,8 @@
 name: Tests
-on: [pull_request]
+on:
+  pull_requests:
+    branches:
+      - main
 jobs:
   tests_wser2022:
     name: Tests on Windows Server 2022
